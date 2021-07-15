@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UserSecretsId>aspnet-Steinbauer-ABDA5020-1A86-42FB-B2D8-BBCDBF3EE0F1</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+        <PackageReference Include="FontAwesome" Version="4.7.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="steinbauer-app\angular.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\e2e\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\package-lock.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\package.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.app.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.spec.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tslint.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\angular.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\e2e\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\package-lock.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\package.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\tsconfig.app.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\tsconfig.spec.json" />
+      <_ContentIncludedByDefault Remove="dutch-app\tslint.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\fonts" />
+    </ItemGroup>
+
+</Project>

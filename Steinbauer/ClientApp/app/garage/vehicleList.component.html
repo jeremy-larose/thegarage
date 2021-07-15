@@ -1,0 +1,48 @@
+<div class="row">
+    <table class="vehicle-info table table-hover">
+        <tr>
+            <th>Owner's Name</th>
+            <th>Vehicle Type</th>
+            <th>Horsepower</th>
+            <th>Torque</th>
+            <th>Engine Status</th>
+            <th class="hidden-medium"></th>
+            <th class="hidden-medium"></th>
+            <th class="hidden-medium"></th>
+        </tr>
+        <tbody>
+        <tr *ngFor="let v of vehicles">
+            <td>{{ v.ownerName }}</td>
+            <td>{{displayVehicleTypeName(v.vehicleType)}}</td>
+            <td>{{calcTotalHorsepower(v)}}hp</td>
+            <td>{{calcTotalTorque(v)}}lb/ft</td>
+            <td *ngIf="v.engineRunning==true" class="table-success"><span class="glyphicon glyphicon-success"></span>Running
+            </td>
+            <td *ngIf="v.engineRunning==false" class="table-warning"><span class="glyphicon glyphicon-remove"></span>Stopped
+            </td>
+
+            <td>
+                <div class="pull-right">
+                    <button id="editButton" class="btn btn-warning btn-sm margin-right" (click)="onEdit(v)">
+                        <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="pull-right">
+                    <button id="deleteButton" class="btn btn-danger btn-sm margin-right" (click)="onDelete(v)">
+                        <span class="glyphicon glyphicon-edit>"></span><span class="hidden-xs"> Delete</span>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="pull-right">
+                    <button id="manageButton" class="btn btn-success btn-sm margin-right" (click)="onManageMods(v)">
+                        <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Manage Mods</span>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
